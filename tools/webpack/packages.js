@@ -173,6 +173,12 @@ module.exports = function( env = { environment: 'production', watch: false, buil
 				],
 			} ),
 		],
+		resolve: {
+			fallback: {
+				fs: false,
+				zlib: false,
+			},
+		},
 	};
 
 	if ( config.mode === 'development' ) {
